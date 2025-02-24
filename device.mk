@@ -23,6 +23,10 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 # Add common definitions for Qualcomm
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
 
+# Remove unwanted packages
+PRODUCT_PACKAGES += \
+    RemovePackages
+
 # Device can have background blurs
 TARGET_USES_BLUR := true
 
